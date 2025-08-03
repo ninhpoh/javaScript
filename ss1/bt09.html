@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mergeAndSortArrays(arr1, arr2) {
+            return [...arr1, ...arr2].sort((a, b) => a - b);
+        }
+
+
+        const input1 = [1, 2, 3, 5, 9];
+        const input2 = [4, 6, 7, 8];
+        const output = mergeAndSortArrays(input1, input2);
+        console.log(output);
+    </script>
+</body>
+
+</html>
