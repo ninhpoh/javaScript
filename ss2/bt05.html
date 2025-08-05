@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let phoneBooks = []
+
+        function addContact(name, phone, email) {
+            const contact = {
+                name: name,
+                phone: phone,
+                email: email
+            }
+            phoneBooks.push(contact)
+        }
+
+        function displayContact() {
+            if (phoneBooks.length === 0) {
+                console.log("Danh ba trong!")
+                return
+            }
+            phoneBooks.forEach((contact, index) => {
+                console.log("Lien he " + (index + 1) + ":")
+                console.log("Ten: " + contact.name)
+                console.log("So Dien Thoai: " + contact.phone)
+                console.log("Email: " + contact.email)
+                console.log("----------------")
+            })
+        }
+
+        addContact("Ten 1", "123456789", "ten1@example.com")
+        addContact("Ten 2", "987654321", "ten2@example.com")
+
+        displayContact()
+    </script>
+</body>
+
+</html>
