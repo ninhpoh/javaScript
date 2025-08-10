@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sumArrays(arrays) {
+            const sums = [];
+            for (let arr of arrays) {
+                const sum = arr.reduce((acc, val) => acc + val, 0);
+                sums.push(sum);
+            }
+            return sums;
+        }
+
+        const inputArrays = [[1, 2], [6, 7, 8], [12, 9], [3, 21, 20]];
+        const output = sumArrays(inputArrays);
+        console.log(output); 
+    </script>
+</body>
+
+</html>
